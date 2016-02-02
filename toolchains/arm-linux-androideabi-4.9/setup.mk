@@ -37,9 +37,9 @@ TARGET_C_INCLUDES := \
 
 ifneq ($(filter $(TARGET_ARCH_ABI), armeabi-v7a armeabi-v7a-hard),)
 ifneq (,$(filter cortex-a15 krait denver,$(TARGET_$(combo_2nd_arch_prefix)CPU_VARIANT)))
-    TARGET_CFLAGS += -mcpu=cortex-a15 \
+    TARGET_CFLAGS += -march=armv7-a \
                      -mfpu=neon-vfpv4 
-    TARGET_LDFLAGS += -mcpu=cortex-a15 \
+    TARGET_LDFLAGS += -march=armv7-a \
                      -Wl,--no-fix-cortex-a8
 else
     TARGET_CFLAGS += -march=armv7-a \
