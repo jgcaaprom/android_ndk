@@ -62,7 +62,7 @@ else
                             -msoft-float
 endif
 
-TARGET_CFLAGS.neon := -mfpu=neon
+TARGET_CFLAGS.neon := -mfpu=neon-vfpv4
 
 TARGET_arm_release_CFLAGS :=  -O2 \
                               -DNDEBUG \
